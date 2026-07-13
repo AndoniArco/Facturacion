@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FacturaON</title>
+    <link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/loginStyles.css">
+	<script src="/js/sha256login.js"></script>
+</head>
+
+<body>
+	
+<div th:include="plantillas/plantilla.html::cabecera"></div>
+
+    <main id="mainSinMenu">
+		<section id="sectionSinMenu">
+			<form th:action="@{/login}" method="post" th:object="${obj_usuario}">
+				<label>Usuario:</label>
+				<input type="text" th:field="*{user}"></input>
+				<br>
+
+				<label>Contraseña:</label>
+					<input type="text" id="pass_sin_hash" oninput="calcularSha256();"></input>
+				<br>
+			
+				<input type="hidden" th:field="*{pass}"></input>
+				
+				<input type="submit" value="Enviar">
+			</form>
+		</section>
+    </main>
+
+<div th:include="plantillas/plantilla.html::pie"></div>
+
+</body>
+
+</html>

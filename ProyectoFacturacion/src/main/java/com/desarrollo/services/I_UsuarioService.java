@@ -2,8 +2,11 @@ package com.desarrollo.services;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.desarrollo.modelo.Usuario;
 
+@Service
 public interface I_UsuarioService {
 	
 	public List<Usuario> obtenerTodos();

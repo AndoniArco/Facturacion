@@ -6,7 +6,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="roles")
 public class Rol {
@@ -17,43 +23,6 @@ public class Rol {
 	
 	@Column(nullable = false, length = 45)
 	private String nombre;
-
-	public Rol(int id, String nombre) {
-		super();
-		this.id = id;
-		this.nombre = nombre;
-	}
-	
-	public Rol() {
-		super();
-		this.id = 0;
-		this.nombre = "";
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	@Override
-	public String toString() {
-		return "Rol [id=" + id + ", nombre=" + nombre + "]";
-	}
-
-	
-	
-	
 	
 
 }

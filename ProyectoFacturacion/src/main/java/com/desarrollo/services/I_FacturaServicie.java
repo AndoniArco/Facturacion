@@ -11,8 +11,8 @@ public interface I_FacturaServicie {
 	
 	public List<Factura> obtenerTodos();
 	public Factura obtenerPorId(Integer id);
-	public Factura insertar(Factura alu);
-	public Factura modificar(Factura alu);
+	public Factura insertar(Factura fact);
+	public Factura modificar(Factura fact);
 	public void borrar(Integer id);
 
 }

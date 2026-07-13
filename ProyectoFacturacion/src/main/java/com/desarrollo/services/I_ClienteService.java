@@ -11,8 +11,8 @@ public interface I_ClienteService {
 
 	public List<Cliente> obtenerTodos();
 	public Cliente obtenerPorId(Integer id);
-	public Cliente insertar(Cliente alu);
-	public Cliente modificar(Cliente alu);
+	public Cliente insertar(Cliente client);
+	public Cliente modificar(Cliente client);
 	public void borrar(Integer id);
 	
 }
