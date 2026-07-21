@@ -3,10 +3,12 @@ package com.desarrollo.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.desarrollo.modelo.Rol;
 import com.desarrollo.repository.RolRepository;
 
+@Service
 public class RolService implements I_RolService {
 
 	@Autowired

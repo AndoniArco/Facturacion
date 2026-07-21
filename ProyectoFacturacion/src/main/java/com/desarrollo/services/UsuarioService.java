@@ -3,12 +3,13 @@ package com.desarrollo.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.desarrollo.componente.JwtUtil;
 import com.desarrollo.modelo.Rol;
 import com.desarrollo.modelo.Usuario;
 import com.desarrollo.repository.UsuarioRepository;
-
+@Service
 public class UsuarioService implements I_UsuarioService{
 	
 	@Autowired

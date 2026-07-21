@@ -3,10 +3,11 @@ package com.desarrollo.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.desarrollo.modelo.Factura;
 import com.desarrollo.repository.FacturaRepository;
-
+@Service
 public class FacturaService implements I_FacturaServicie {
 
 	@Autowired
@@ -64,6 +65,18 @@ public class FacturaService implements I_FacturaServicie {
 			factuRepo.deleteById(id);
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+	
+	public List<Factura> obtenerTodosPorIDCliente(Integer id) {
+		try {
+			if(id!=null && id>0) {
+				return factuRepo.findAllByUsuarioId(id);
+			}
+			return null;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
 		}
 	}
 

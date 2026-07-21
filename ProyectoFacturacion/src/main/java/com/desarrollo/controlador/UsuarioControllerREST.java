@@ -21,7 +21,7 @@ import com.desarrollo.services.UsuarioService;
 @RestController
 @RequestMapping("/api/v1/usuarios/")
 public class UsuarioControllerREST {
-	
+
 	@Autowired
 	private UsuarioService usuarioServ;
 	

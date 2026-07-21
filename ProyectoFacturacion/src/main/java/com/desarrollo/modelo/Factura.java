@@ -3,6 +3,8 @@ package com.desarrollo.modelo;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -30,6 +32,7 @@ public class Factura {
 	@Column(nullable = false, precision = 10, scale = 2)
 	private BigDecimal importe;
 	@ManyToOne
+	@JsonBackReference
 	@JoinColumn(name = "cliente_id", nullable = false)
 	private Cliente cliente;
 	@ManyToOne
